@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur d'intérêt composé</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <h1 style="text-align: center;">Calculateur d'intérêt composé</h1>
+        <form onchange="calculInterest()">
+            <table class="table1">
+                <tr>
+                    <td style="width: 50%;">
+                        <label for="placement">Placement initial</label>
+                        <input id="placement" type="number" placeholder="0,00">
+                    </td>
+                    <td style="width: 50%;">
+                        <label for="annees">Année(s)</label>
+                        <input id="annees" type="number" placeholder="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <label for="interets">Intérêts (%)</label>
+                        <input id="interets" type="number" placeholder="0,00">
+                    </td>
+                    <td style="width: 50%;">
+                        <label for="calcInteret">Calcul des intérêts</label>
+                        <select id="calcInteret">
+                            <option value="1">Tous les mois</option>
+                            <option value="2">Tous les trois mois</option>
+                            <option value="3">Tous les 6 mois</option>
+                            <option value="4" selected>Tous les ans</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <h3 style="text-align: center;">Versement périodique</h3>
+            <table class="table2">
+                <tr>
+                    <td style="width: 33%;">
+                        <label for="versement">Versement</label>
+                        <input id="versement" type="number" placeholder="0.00">
+                    </td>
+                    <td style="width: 33%;">
+                        <label for="frequence">Fréquence</label>
+                        <select id="frequence">
+                            <option value="1">Tous les mois</option>
+                            <option value="2">Tous les trois mois</option>
+                            <option value="3">Tous les 6 mois</option>
+                            <option value="4">Tous les ans</option>
+                        </select>
+                    </td>
+                    <td style="width: 33%;">
+                        <label for="periode">Quand</label>
+                        <select id="periode">
+                            <option value="1">A l'avance (au début)</option>
+                            <option value="2">Au terme (à la fin)</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <table>
+            <tr>
+                <td>Montant total de l'investissement après <a id="nbrannee">0</a> ans : <b id="totalInvestment">0,00 CHF</b></td>
+            </tr>
+            <tr>
+                <td>Soit un gains finale de : <b id="totalGains">0,00 CHF</b></td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <p class="copyright"><a class="link" target="_blank" href="https://webcustom.ch">WebCustom</a> ©2024</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
